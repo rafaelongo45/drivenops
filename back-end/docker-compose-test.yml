@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres
+    container_name: db_test
+    restart: always
+    ports:
+      - 1234:5432
+    env_file:
+      - .env.test
+
+  app:
+    build: .
+    ports:
+      - 5000:5000
+    depends_on:
+      - db_test
+    env_file:
+      - .env.test
