@@ -27,7 +27,7 @@ app.get("/students/random", async (req: Request, res: Response) => {
     const randomStudent = students[Math.floor(Math.random() * students.length)];
     res.send(randomStudent);
   } else {
-    res.send(null);
+    res.send(null );
   }
 });
 
