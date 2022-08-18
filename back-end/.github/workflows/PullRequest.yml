@@ -1,4 +1,4 @@
-name: PR
+name: Pull Request on Github
 on: [pull_request]
 jobs:
   PullRequest:
@@ -17,4 +17,4 @@ jobs:
       - name: Runs tests
         run: docker-compose -f docker-compose-test.yml run app npm run test
       - name: Run build
-        run: mpn i && npm run build 
+        run: npm i && npm run build 
