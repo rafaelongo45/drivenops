@@ -1,6 +1,6 @@
 services:
   app_react:
-    build: .
+    build: ./front-end
     container_name: app_react
     volumes:
       - build_react:/var/www/html
