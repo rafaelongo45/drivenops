@@ -34,6 +34,8 @@ services:
     volumes:
       - build_react:/var/www/html
     depends_on:
+      - db
+      - app
       - app_react
 
 volumes:
