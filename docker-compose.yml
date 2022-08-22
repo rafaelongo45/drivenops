@@ -13,6 +13,7 @@ services:
   app:
     container_name: app
     build: back-end/
+    image: app
     ports:
       - 5000:5000
     depends_on:
@@ -23,12 +24,14 @@ services:
   app_react:
     build: ./front-end
     container_name: app_react
+    image: app_react
     volumes:
       - build_react:/var/www/html
 
   nginx:
     build: ./nginx
     container_name: nginx
+    image: nginx
     ports:
       - 80:80
     volumes:
